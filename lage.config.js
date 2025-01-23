@@ -1,10 +1,10 @@
 module.exports = {
   pipeline: {
     build: {
-      type: "npmScripts",
+      type: "npmScript",
     },
     test: {
-      type: "npmScripts",
+      type: "npmScript",
     },
   },
 };
