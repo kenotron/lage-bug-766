@@ -4,7 +4,10 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "lage": "^2.12.9"
+    "lage": "2.7.16"
+  },
+  "scripts": {
+    "install-all": "yarn install"
   },
   "workspaces": [
     "packages/*"

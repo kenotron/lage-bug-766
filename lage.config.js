@@ -1,10 +1,14 @@
 module.exports = {
+  npmClient: "yarn",
   pipeline: {
-    build: {
+    "#install-all": {
       type: "npmScript",
+      inputs: [],
+      cache: false,
     },
-    test: {
-      type: "npmScript",
-    },
+    build: ["#install-all"],
+    test: ["#install-all", "^build"],
+    "echo-something": [],
+    "b#build": { dependsOn: ["#install-all", "echo-something"], cache: false }
   },
 };
